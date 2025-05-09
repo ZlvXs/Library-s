@@ -350,6 +350,7 @@ function library:CreateWindow(name, size, hidebutton)
     window.NameLabel = Instance.new("TextLabel", window.TopBar)
     window.NameLabel.TextColor3 = window.theme.toptextcolor
     window.NameLabel.Text = window.name
+    window.NameLabel.RichText = true
     window.NameLabel.TextXAlignment = Enum.TextXAlignment.Left
     window.NameLabel.Font = window.theme.font
     window.NameLabel.Name = "title"
