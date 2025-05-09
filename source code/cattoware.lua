@@ -1,3 +1,4 @@
+
 local library = { 
 	flags = { }, 
 	items = { } 
@@ -26,14 +27,14 @@ library.theme = {
     cursor = false,
     cursorimg = "https://t0.rbxcdn.com/42f66da98c40252ee151326a82aab51f",
     backgroundcolor = Color3.fromRGB(10, 10, 10),
-    tabstextcolor = Color3.fromRGB(255,255,255),
+    tabstextcolor = Color3.fromRGB(255, 255, 255),
     bordercolor = Color3.fromRGB(60, 60, 60),
-    accentcolor = Color3.fromRGB(255,255,255),
-    accentcolor2 = Color3.fromRGB(255,255,255),
+    accentcolor = Color3.fromRGB(125, 85, 255),
+    accentcolor2 = Color3.fromRGB(125, 85, 255),
     outlinecolor = Color3.fromRGB(60, 60, 60),
     outlinecolor2 = Color3.fromRGB(0, 0, 0),
     sectorcolor = Color3.fromRGB(30, 30, 30),
-    toptextcolor = Color3.fromRGB(255,255,255),
+    toptextcolor = Color3.fromRGB(255, 255, 255),
     topheight = 48,
     topcolor = Color3.fromRGB(30, 30, 30),
     topcolor2 = Color3.fromRGB(30, 30, 30),
@@ -350,7 +351,6 @@ function library:CreateWindow(name, size, hidebutton)
     window.NameLabel = Instance.new("TextLabel", window.TopBar)
     window.NameLabel.TextColor3 = window.theme.toptextcolor
     window.NameLabel.Text = window.name
-    window.NameLabel.RichText = true
     window.NameLabel.TextXAlignment = Enum.TextXAlignment.Left
     window.NameLabel.Font = window.theme.font
     window.NameLabel.Name = "title"
