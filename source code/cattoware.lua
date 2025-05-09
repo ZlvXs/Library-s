@@ -349,7 +349,6 @@ function library:CreateWindow(name, size, hidebutton)
 
     window.NameLabel = Instance.new("TextLabel", window.TopBar)
     window.NameLabel.TextColor3 = window.theme.toptextcolor
-    window.NameLabel.RichText = true
     window.NameLabel.Text = window.name
     window.NameLabel.TextXAlignment = Enum.TextXAlignment.Left
     window.NameLabel.Font = window.theme.font
@@ -451,7 +450,7 @@ function library:CreateWindow(name, size, hidebutton)
         tab.TabButton.TextSize = window.theme.fontsize
         updateevent.Event:Connect(function(theme)
             local size = textservice:GetTextSize(tab.name, theme.fontsize, theme.font, Vector2.new(200,300))
-            tab.TabButton.TextColor3 = tab.TabButton.Name == "SelectedTab" and theme.accentcolor or theme.tabstextcolor
+            tab.TabButton.TextColor3 = tab.TabButton.Name == "SelectedTab" and theme.tabstextcolor or theme.tabstextcolor
             tab.TabButton.Font = theme.font
             tab.TabButton.Size = UDim2.fromOffset(size.X + 15, window.TabList.AbsoluteSize.Y - 1)
             tab.TabButton.TextSize = theme.fontsize
@@ -513,7 +512,7 @@ function library:CreateWindow(name, size, hidebutton)
                 end
             end
 
-            tab.TabButton.TextColor3 = window.theme.accentcolor
+            tab.TabButton.TextColor3 = theme.tabstextcolor
             tab.TabButton.Name = "SelectedTab"
             tab.Right.Visible = true
             tab.Left.Visible = true
